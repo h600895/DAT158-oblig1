@@ -17,7 +17,7 @@ def LCSRec(string1, string2, i, j):
 # Oppgave 9B
 
 def LCSDyn(string1, string2, pls1, pls2):
-    # pls1,2 kun for at det skal være mulig å kalle begge algoritmene fra en funksjon
+    # pls1,2 kun for at det skal være mulig å kalle begge algoritmene fra en run funksjon
     table = [[0 for _ in range(len(string2)+1)]]
     for i in range(1, len(string1) + 1):
         table.append([0])
@@ -56,12 +56,8 @@ def run_algo(string1, string2, index):
     res = functions[index][0](string1, string2, len(string1) - 1, len(string2) - 1)
     stop = timeit.default_timer()
     time = stop - start
-    #dict = {"title": functions[index][1], "result": res, "time": time}
     return functions[index][1], res, time
-    #return dict
-    #print(functions[index][1])
-    #print(res)
-    #print()
+
 
 if __name__ == '__main__':
     LENGTH = 13

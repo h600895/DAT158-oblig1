@@ -55,8 +55,4 @@ if __name__ == '__main__':
     printStats(nor_res[1], nor_text, "Norwegian: ")
     printStats(eng_res[1], eng_text, "English: ")
 
-    #print(lastDict)
-    #result = boyer_moore(text, pattern)
-    #print(result)
-
 

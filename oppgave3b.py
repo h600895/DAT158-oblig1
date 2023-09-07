@@ -1,8 +1,8 @@
 from vars import *
 
 def KMP(pattern, text):
-    lenPattern = len(pattern) #lenPattern
-    lenText = len(text) #lenText
+    lenPattern = len(pattern)
+    lenText = len(text)
 
     j = 0
     i = 0
@@ -18,8 +18,6 @@ def KMP(pattern, text):
             j += 1
 
         if j == lenPattern:
-            #return f"Fant mønsteret på index {i - j}", compare
-            #print("Found pattern at index " + str(i - j))
             found = True
             j = ff[j - 1]
 
@@ -40,7 +38,6 @@ def KMPFailureFunction(pattern):
         j = i
 
         while True:
-            # string.
             if j == 0:
                 ff.append(0)
                 break
